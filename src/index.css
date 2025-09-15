@@ -1,68 +1,186 @@
+@import "tailwindcss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  /* Base font size setup: 62.5% = 10px = 1rem */
+  font-size: 62.5%;
+
+  /* Colors */
+  /* Neutral Colors */
+  --color-neutral-900: #163a34;
+  --color-neutral-600: #395852;
+  --color-neutral-300: #d0dcd9;
+  --color-neutral-200: #e0e6e3;
+  --color-neutral-100: #f6f5f1;
+  --color-neutral-0: #ffffff;
+
+  /* Brand Colors */
+  --color-orange-500: #fe9f6b;
+  --color-teal-500: #49ac9b;
+  --color-indigo-500: #697ddb;
+
+  /* Typography - Font Families */
+  --font-primary: "Nunito", sans-serif;
+  --font-secondary: "Nunito Sans", sans-serif;
+
+  /* Typography - Font Weights */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Typography - Font Sizes (1rem = 10px) */
+  --font-size-preset-1: 7.2rem; /* 72px */
+  --font-size-preset-1-tablet: 6.4rem; /* 64px */
+  --font-size-preset-1-mobile: 5.2rem; /* 52px */
+  --font-size-preset-2: 4.8rem; /* 48px */
+  --font-size-preset-2-mobile: 4rem; /* 40px */
+  --font-size-preset-3: 3.2rem; /* 32px */
+  --font-size-preset-4: 2.4rem; /* 24px */
+  --font-size-preset-5: 2rem; /* 20px */
+  --font-size-preset-6: 2rem; /* 20px */
+  --font-size-preset-7: 1.8rem; /* 18px */
+  --font-size-preset-8: 1.6rem; /* 16px */
+  --font-size-preset-9: 1.6rem; /* 16px */
+  --font-size-preset-10: 1.4rem; /* 14px */
+
+  /* Typography - Line Heights */
+  --line-height-tight: 110%;
+  --line-height-snug: 120%;
+  --line-height-normal: 130%;
+  --line-height-relaxed: 140%;
+  --line-height-loose: 150%;
+
+  /* Typography - Letter Spacing */
+  --letter-spacing-tight: -0.2rem; /* -2px */
+  --letter-spacing-snug: -0.1rem; /* -1px */
+  --letter-spacing-normal: -0.05rem; /* -0.5px */
+  --letter-spacing-wide: -0.04rem; /* -0.4px */
+  --letter-spacing-wider: -0.03rem; /* -0.3px */
+
+  /* Text Preset Classes */
+  --text-preset-1: var(--font-weight-extrabold) var(--font-size-preset-1) /
+    var(--line-height-tight) var(--font-primary);
+  --text-preset-1-tablet: var(--font-weight-extrabold)
+    var(--font-size-preset-1-tablet) / var(--line-height-tight)
+    var(--font-primary);
+  --text-preset-1-mobile: var(--font-weight-extrabold)
+    var(--font-size-preset-1-mobile) / var(--line-height-tight)
+    var(--font-primary);
+  --text-preset-2: var(--font-weight-extrabold) var(--font-size-preset-2) /
+    var(--line-height-snug) var(--font-primary);
+  --text-preset-2-mobile: var(--font-weight-extrabold)
+    var(--font-size-preset-2-mobile) / var(--line-height-snug)
+    var(--font-primary);
+  --text-preset-3: var(--font-weight-bold) var(--font-size-preset-3) /
+    var(--line-height-normal) var(--font-primary);
+  --text-preset-4: var(--font-weight-bold) var(--font-size-preset-4) /
+    var(--line-height-normal) var(--font-primary);
+  --text-preset-5: var(--font-weight-bold) var(--font-size-preset-5) /
+    var(--line-height-relaxed) var(--font-primary);
+  --text-preset-6: var(--font-weight-medium) var(--font-size-preset-6) /
+    var(--line-height-relaxed) var(--font-secondary);
+  --text-preset-7: var(--font-weight-semibold) var(--font-size-preset-7) /
+    var(--line-height-loose) var(--font-primary);
+  --text-preset-8: var(--font-weight-bold) var(--font-size-preset-8) /
+    var(--line-height-loose) var(--font-secondary);
+  --text-preset-9: var(--font-weight-medium) var(--font-size-preset-9) /
+    var(--line-height-loose) var(--font-secondary);
+  --text-preset-10: var(--font-weight-bold) var(--font-size-preset-10) /
+    var(--line-height-loose) var(--font-secondary);
+}
+
+:root {
+  --font-primary: "Nunito Sans", sans-serif;
+
+  /* Typography - Font Weights */
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito_Sans";
+  font-style: normal;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  src: url("../public/fonts/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-a {
+/* nunito-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  src: url("../public/fonts/nunito-sans-v18-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-a:hover {
-  color: #535bf2;
+/* nunito-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/nunito-sans-v18-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../public/fonts/nunito-sans-v18-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* inter-regular - latin */
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/fonts/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.h_bg{
+  background-image: url(../public/images/h-bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.bg-30{
+  background-image: url(../public/images/bg-30.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 10px;
+  
+}
+h1{
+  font-family: Nunito_Sans;
+}
+.container{
+  max-width: 1440px;
+  width: 100%;
+}
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+ 
+  
+  margin: auto;
+  font-family: var(--font-primary);
+  font-size: var(--fs-preset-6);
+  line-height: var(--lh-preset-6);
+  background: var(--color-neutral-100);
 }
+.header_btn{
+  font-family: var(--text-preset-5);
+}
+.hero{
+  background-image: url(../public/images/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.header_ul{
+  font-family: var(--text-preset-7);
 }
