@@ -17,7 +17,7 @@ const Navbar = () => {
             Recipes
           </li>
         </ul>
-        <button className='text-nunito max-[768px]:hidden bg-[#163A34] px-8 py-5 rounded-2xl text-3xl max-2xl:text-2xl max-2xl:px-7 max-2xl:py-3 text-white font-nunito  hover:bg-white hover:text-[#163A34] hover:border-[#163A34] hover:scale-105 border-3 transition-all font-bold'>Browse recipes</button>
+        <button className='text-nunito border-transparent max-[768px]:hidden bg-[#163A34] px-8 py-5 rounded-2xl text-3xl max-2xl:text-2xl max-2xl:px-7 max-2xl:py-3 text-white font-nunito  hover:bg-white hover:text-[#163A34] hover:border-[#163A34] hover:scale-105 border-3 transition-all font-bold'>Browse recipes</button>
         <button className='max-[768px]:flex hidden' onClick={()=> setOpenNav(!openNav)}><img src="/images/icon-hamburger-menu.svg" alt="" /></button>
       </div>
       {
