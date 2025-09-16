@@ -3,22 +3,24 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='mx-auto hero mt-20 container'>
-        <h1 className='text-center text-8xl font-[Nunito_Sans] max-2xl:text-7xl max-lg:text-6xl max-md:text-5xl max-sm:text-4xl font-bold'> <span className='h_bg'>Healthy</span> meals, zero fuss</h1>
+    <div className='mx-auto mt-20 container'>
+        <div className='hero'>
+        <h1 className='text-center text-8xl font-[Nunito_Sans] max-2xl:text-7xl max-lg:text-6xl max-md:text-5xl m font-bold'> <span className='h_bg'>Healthy</span> meals, zero fuss</h1>
         <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-sm text-[#395852] mt-12'>Discover eight quick, whole-food recipes that you can cook tonight</p>
         <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-sm text-[#395852]'>—no processed junk, no guesswork.</p>
         <button className='bg-[#163A34] mb-10 px-12 flex mx-auto mt-10 py-7 text-4xl max-2xl:text-3xl max-lg:text-2xl max-md:text-xl max-md:px-7 max-md:py-3 max-2xl:px-10 max-2xl:py-5 max-sm:text-[13px] text-white font-nunito rounded-2xl hover:bg-white hover:text-[#163A34] hover:border-[#163A34] hover:scale-105 border-3 transition-all font-bold' >Start exploring</button>
 
         <picture >
-            <source srcSet="/images/image-home-hero-large.webp" media="(min-width:1024px)" type="image/webp" />
-            <source srcSet="/images/hero-large.jpg" media="(min-width:1024px)" type="image/jpeg" />
-            <img src="/images/image-home-hero-small.webp" alt="Hero background"  className="w-full border-10 border-white rounded-3xl max-sm:border-5 h-auto" />
+            <source srcSet="/images/image-home-hero-large.webp" className='max-w-[1190px] w-full' media="(min-width:1024px)" type="image/webp" />
+            <source srcSet="/images/hero-large.jpg" className='w-[50%] mx-20' media="(min-width:1024px)" type="image/jpeg" />
+            <img src="/images/image-home-hero-small.webp" alt="Hero background"  className="w-[90%] mx-auto border-10 border-white rounded-3xl max-sm:border-5 h-auto" />
         </picture>
+        </div>
 
-        <section className='mt-30 max-lg:mt-20'>
+        <section className='mt-30 max-lg:mt-20 max-sm:mt-15'>
             <h2 className='text-center text-7xl max-2xl:text-6xl max-xl:text-5xl max-lg:text-4xl   font-bold'>What you’ll get</h2>
             <div>
-                <div className='flex max-md:flex-col *:max-md:w-full max-md:space-y-10 items-center justify-between *:w-[30%] mt-20 mx-10 max-sm:mx-5'>
+                <div className='flex max-md:flex-col *:max-md:w-full max-md:space-y-10 items-center justify-between *:w-[30%] mt-20 max-sm:mt-10 mx-10 max-sm:mx-5'>
                     <div>
                         <img src="/images/Carrots.svg" className='max-sm:w-20' alt="" />
                         <h3 className='text-5xl max-2xl:text-4xl max-lg:text-3xl py-5 font-bold'>Whole-food recipes</h3>

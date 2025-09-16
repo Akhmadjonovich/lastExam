@@ -184,3 +184,12 @@ body {
 .header_ul{
   font-family: var(--text-preset-7);
 }
+
+.footer-1{
+  background-image: url(../public/images/footer-bg-1.svg), url(../public/images/footer-bg-2.svg);
+  background-position: left , right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+  /* background: #E9EDE8; */
+}
+
