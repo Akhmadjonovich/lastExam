@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         <div className='flex items-center justify-between container mx-auto  py-10 px-20 max-md:px-10 max-sm:px-5 '>
             <h3 className='text-4xl max-xl:text-3xl max-md:text-2xl max-sm:text-xl'>Made with ❤️ and 🥑</h3>
-            <div className='flex items-center gap-10 max-sm:gap-5 *:w-15 *:max-xl:w-10 *:max-md:w-7 *:max-sm:w-5'>
+            <div className='flex items-center gap-10 max-sm:gap-5 *:w-12 *:max-xl:w-10 *:max-md:w-7 *:max-sm:w-5'>
                 <img src="/images/icon-instagram.svg" alt="" />
                 <img src="/images/icon-bluesky.svg" alt="" />
                 <img src="/images/icon-tiktok.svg" alt="" />
