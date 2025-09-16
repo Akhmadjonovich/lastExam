@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   let [openNav , setOpenNav] = useState(false)
@@ -7,12 +8,13 @@ const Navbar = () => {
       <div className='flex items-center justify-between px-20 max-md:px-10 max-sm:px-5 py-5 mx-auto '>
         <img src="/images/logo.svg" alt="" />
         <ul className="flex text-3xl max-2xl:text-2xl gap-10 max-[768px]:hidden">
-          <li className="relative cursor-pointer border-b-3 border-transparent hover:border-orange-500 transition-all duration-300">
+          <Link to="/"><li className="relative cursor-pointer border-b-3 border-transparent hover:border-orange-500 transition-all duration-300">
             Home
           </li>
-          <li className="relative cursor-pointer border-b-3 border-transparent hover:border-orange-500 transition-all duration-300">
+          </Link>
+          <Link to="/about"><li className="relative cursor-pointer border-b-3 border-transparent hover:border-orange-500 transition-all duration-300">
             About
-          </li>
+          </li></Link>
           <li className="relative cursor-pointer border-b-3 border-transparent hover:border-orange-500 transition-all duration-300">
             Recipes
           </li>
@@ -22,11 +24,11 @@ const Navbar = () => {
       </div>
       {
         openNav && <div className='bg-white  w-[80%] h-screen absolute top-0 left-0'>
-          <ul className='text-3xl space-y-7 p-10 *:bg-[#F6F5F1] *:p-2 *:rounded-xl'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Recipes</li>
-            <li>Browse recipes</li>
+          <ul className='text-3xl space-y-7 p-10 '>
+            <Link to="/"><li className='bg-[#F6F5F1] p-2 rounded-xl'>Home</li></Link>
+            <Link to="about"><li className='bg-[#F6F5F1] p-2 rounded-xl'>About</li></Link>
+            <li className='bg-[#F6F5F1] p-2 rounded-xl'>Recipes</li>
+            <li className='bg-[#F6F5F1] p-2 rounded-xl'>Browse recipes</li>
           </ul>
           
           <button className='absolute top-2 right-2 text-3xl' onClick={() => setOpenNav(!openNav)}>✖</button>
