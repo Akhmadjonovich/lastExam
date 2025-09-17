@@ -140,13 +140,21 @@
   src: url("../public/fonts/inter-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-.h_bg{
+.h_bg {
   background-image: url(../public/images/h-bg.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px; 
 }
+
+
+@media (max-width: 768px) {
+  .h_bg {
+    background-size: contain;
+  }
+}
+
 
 .bg-30{
   background-image: url(../public/images/bg-30.png);
