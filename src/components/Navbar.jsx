@@ -23,7 +23,7 @@ const Navbar = () => {
         <button className='max-[768px]:flex hidden' onClick={()=> setOpenNav(!openNav)}><img src="/images/icon-hamburger-menu.svg" alt="" /></button>
       </div>
       {
-        openNav && <div className='bg-white  w-[80%] h-screen absolute top-0 left-0'>
+        openNav && <div className='bg-white z-10 w-[80%] h-screen absolute top-0 left-0'>
           <ul className='text-3xl  p-10 '>
             <Link onClick={() => setOpenNav(!openNav)} to="/"><li className='bg-[#F6F5F1] p-2 rounded-xl my-5'>Home</li></Link>
             <Link onClick={() => setOpenNav(!openNav)} to="/about"><li className='bg-[#F6F5F1] p-2 rounded-xl my-5'>About</li></Link>

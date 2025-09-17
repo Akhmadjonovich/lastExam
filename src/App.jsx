@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/recipes" element={<Recipes />} />
       </Routes>
 
-      <Footer/>
+      
     </div>
   )
 }

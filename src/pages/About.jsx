@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer'
 
 const About = () => {
   return (
@@ -95,7 +96,7 @@ const About = () => {
       <img src="images/image-about-beyond-the-plate-large.webp" className='w-[744px] max-2xl:w-[680px] max-xl:w-[600px] max-lg:w-[450px] max-md:w-full rounded-3xl' alt="" />
     </section>
     
-
+    <Footer/>
     </div>
   )
 }

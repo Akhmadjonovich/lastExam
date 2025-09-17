@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer'
 
 
 const Home = () => {
@@ -6,8 +7,8 @@ const Home = () => {
     <div className='mx-auto mt-20 container'>
         <div className='hero'>
         <h1 className='text-center text-8xl font-[Nunito_Sans] max-2xl:text-7xl max-lg:text-6xl max-md:text-5xl  font-bold'> <span className='h_bg'>Healthy</span> meals, zero fuss</h1>
-        <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-sm text-[#395852] mt-12'>Discover eight quick, whole-food recipes that you can cook tonight</p>
-        <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-sm text-[#395852]'>—no processed junk, no guesswork.</p>
+        <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-lg text-[#395852] mt-12'>Discover eight quick, whole-food recipes that you can cook tonight</p>
+        <p className='text-center text-3xl max-2xl:text-2xl max-lg:text-xl max-md:text-lg text-[#395852]'>—no processed junk, no guesswork.</p>
         <button className='bg-[#163A34] border-transparent mb-10 px-12 flex mx-auto mt-10 py-7 text-4xl max-2xl:text-3xl max-lg:text-2xl max-md:text-xl max-md:px-7 max-md:py-3 max-2xl:px-10 max-2xl:py-5 max-sm:text-[13px] text-white font-nunito rounded-2xl hover:bg-white hover:text-[#163A34] hover:border-[#163A34] hover:scale-105 border-3 transition-all font-bold' >Start exploring</button>
 
         <picture >
@@ -49,6 +50,8 @@ const Home = () => {
             </div>
             <img src="/images/image-home-real-life-large.webp" className='w-[700px] max-2xl:w-[600px] max-xl:w-[500px] max-lg:w-[400px] max-md:w-full mb-20 rounded-2xl' alt="" />
         </section>
+
+        <Footer/>
     </div>
   )
 }
