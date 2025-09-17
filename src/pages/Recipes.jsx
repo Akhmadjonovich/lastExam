@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 const Recipes = () => {
 
-    const [data, setData] = useState([]); // Ma’lumotlarni saqlash uchun state
+    const [data, setData] = useState([]); 
     const [loading, setLoading] = useState(true); // Yuklanish holatini ko‘rsatish
     let urlPoint = "https://recipes-api-3o3s.onrender.com/recipes" 
     useEffect(() => {
@@ -19,7 +19,9 @@ const Recipes = () => {
         });
     }, [urlPoint]); 
   console.log(data);
-    if (loading) return <p>Yuklanmoqda...</p>;
+    if (loading) return <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="h-16 w-16 border-4 border-[#FE9F6B] border-t-transparent rounded-full animate-spin"></div>
+    </div>;
 
   return (
     <div className='container mx-auto mt-20 '>
