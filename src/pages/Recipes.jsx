@@ -5,7 +5,7 @@ const Recipes = () => {
 
     const [data, setData] = useState([]); // Ma’lumotlarni saqlash uchun state
     const [loading, setLoading] = useState(true); // Yuklanish holatini ko‘rsatish
-    let urlPoint = "http://localhost:3000/recipes" 
+    let urlPoint = "https://recipes-api-3o3s.onrender.com/recipes" 
     useEffect(() => {
       
       axios.get(urlPoint)
