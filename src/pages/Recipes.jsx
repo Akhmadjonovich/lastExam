@@ -48,7 +48,7 @@ const Recipes = ({data, loading}) => {
       </p>
 
       
-      <section className="flex max-sm:flex-col gap-5 justify-between mx-10 max-sm:mx-5  my-10 relative">
+      <section className="flex max-sm:flex-col gap-5 justify-between mx-10 max-sm:mx-5 mt-20 my-10 relative">
         <div className='flex max-sm:flex-col gap-10 max-md:gap-5 max-sm:w-full'>
         
           <div 
@@ -145,7 +145,7 @@ const Recipes = ({data, loading}) => {
         {finalList.map((r) => (
           <div
             key={r.id}
-            className="relative bg-white max-md:w-full rounded-2xl h-[103%] pb-10 max-sm:pb-15 mt-20 max-xl:mt-10 max-lg:mt-5 max-md:mt-0"
+            className="relative bg-white max-md:w-full rounded-2xl h-[103%] pb-10 max-sm:pb-15 mt-0  max-lg:mt-5 max-md:mt-0"
           >
             <img src={r.image.large} className="rounded-3xl p-3 max-sm:p-2" alt="" />
             <div className="p-5">
