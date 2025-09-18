@@ -63,20 +63,20 @@ const Recipes = () => {
       </p>
 
       
-      <section className="flex gap-5 justify-between mx-10 my-10 relative">
-        <div className='flex gap-10'>
+      <section className="flex max-sm:flex-col gap-5 justify-between mx-10 max-sm:mx-5  my-10 relative">
+        <div className='flex max-sm:flex-col gap-10 max-md:gap-5 max-sm:w-full'>
         
           <div 
-            className="relative inline-block"
+            className="relative inline-block max-sm:w-full"
             onMouseEnter={() => setOpenPrep(true)}
             onMouseLeave={() => setOpenPrep(false)} 
           >
-            <button className="px-10 flex items-center py-1 h-18 text-2xl border border-transparent hover:border-black rounded-md bg-white shadow">
+            <button className="px-5 w-full justify-center  flex items-center py-1 h-18 max-lg:h-15 text-2xl max-md:text-xl  border border-transparent hover:border-black rounded-md bg-white shadow">
               Max Prep Time <img src="/images/Down.svg"  alt="" />
             </button>
             
             {openPrep && (
-              <div className="absolute left-0 mt-0.5 text-2xl  w-70 bg-white rounded-xl  shadow-xl z-10">
+              <div className="absolute left-0 mt-0.5 text-2xl max-md:text-xl w-70 bg-white rounded-xl  shadow-xl z-10">
                 {times.map((time) => (
                   <label
                     key={time}
@@ -109,12 +109,12 @@ const Recipes = () => {
             onMouseLeave={() => setOpenCook(false)}
               
           >
-            <button className="px-4 py-1 flex items-center h-18 border  border-transparent hover:border-black text-2xl rounded-md bg-white shadow">
+            <button className="px-5 py-1 flex justify-center w-full items-center h-18 max-lg:h-15 border  border-transparent hover:border-black text-2xl max-md:text-xl rounded-md bg-white shadow">
               Max Cook Time <img src="/images/Down.svg"  alt="" />
             </button>
 
             {openCook && (
-              <div className="absolute left-0 mt-1 w-70 text-2xl bg-white rounded-xl shadow-xl z-10">
+              <div className="absolute left-0 mt-1 w-70 text-2xl max-md:text-xl bg-white rounded-xl shadow-xl z-10">
                 {times.map((time) => (
                   <label
                     key={time}
@@ -143,7 +143,7 @@ const Recipes = () => {
         </div>
 
         <div>
-            <form className='bg-white flex p-5 gap-2 w-md rounded-2xl '>
+            <form className='bg-white flex max-sm:w-full p-5 max-lg:p-3 border border-transparent hover:border-black focus:border-black gap-2 w-md max-md:w-sm rounded-2xl '>
                 <img src="/images/Search.svg" alt="" />
                 <input 
                  type="text"
@@ -160,7 +160,7 @@ const Recipes = () => {
         {finalList.map((r) => (
           <div
             key={r.id}
-            className="relative bg-white max-md:w-full rounded-2xl h-[103%] mt-20"
+            className="relative bg-white max-md:w-full rounded-2xl h-[103%] mt-20 max-xl:mt-10 max-lg:mt-5 max-md:mt-0"
           >
             <img src={r.image.large} className="rounded-3xl p-3 max-sm:p-2" alt="" />
             <div className="p-5">
