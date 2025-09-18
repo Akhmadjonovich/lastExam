@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const Recipes = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Recipes = ({data, loading}) => {
+  
   const [prepTime, setPrepTime] = useState("");
   const [cookTime, setCookTime] = useState("");
   const [openPrep, setOpenPrep] = useState(false);
   const [openCook, setOpenCook] = useState(false);
   const [search, setSearch] = useState("");
-
-  let urlPoint = "https://recipes-api-3o3s.onrender.com/recipes";
-
-  useEffect(() => {
-    axios
-      .get(urlPoint)
-      .then((response) => {
-        setData(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Xatolik:", error);
-        setLoading(false);
-      });
-  }, [urlPoint]);
 
   
   // search
@@ -182,9 +167,9 @@ const Recipes = () => {
                   <img src="/images/icon-cook-time.svg" alt="" />
                   <p>Cook: {r.cookMinutes} mins</p>
                 </div>
-                <button className="rounded-4xl absolute text-center bg-[#163A34] py-5 text-white bottom-5 right-5 left-5">
+                <Link to={`/recipes/${r.id}`} className="rounded-4xl absolute text-center bg-[#163A34] py-5 text-white bottom-5 right-5 left-5">
                   View Recipe
-                </button>
+                </Link>
               </div>
             </div>
           </div>
