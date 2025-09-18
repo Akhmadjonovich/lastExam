@@ -18,7 +18,7 @@ const RecipesDetailed = ({data, loading}) => {
         
     if (!recipe) return <p className="text-center mt-20 text-3xl">Recipe not found</p>;
 
-    
+    console.log(recipe.image.large);
   return (
     <div className='container mx-auto'>
         <div key={recipe.id} className='flex justify-between mx-40 gap-20 mt-20'>
