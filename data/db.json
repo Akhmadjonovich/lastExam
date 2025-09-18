@@ -6,7 +6,7 @@
           "slug": "mediterranean-chickpea-salad",
           "image": {
             "large": "/images/mediterranean-chickpea-salad-large.webp",
-            "small": "./images/mediterranean-chickpea-salad-small.webp"
+            "small": "/images/mediterranean-chickpea-salad-small.webp"
           },
           "overview": "A refreshing, protein-packed salad tossed in a lemon-olive oil dressing.",
           "servings": 2,

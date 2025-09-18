@@ -17,10 +17,37 @@ const RecipesDetailed = ({data, loading}) => {
         );
         
     if (!recipe) return <p className="text-center mt-20 text-3xl">Recipe not found</p>;
+
+    
   return (
-    <div>
-        <div key={recipe.id}>
-            <h1>{recipe.title}</h1>
+    <div className='container mx-auto'>
+        <div key={recipe.id} className='flex justify-between mx-40 gap-20 mt-20'>
+            <div>
+              <h2 className='text-2xl py-5'>Recipes / {recipe.title}</h2>
+              <img src={recipe.image.large } className='w-[580px]' alt="" />
+            </div>
+
+            {/* info */}
+
+            <div className='mt-16'>
+                <h3 className='text-7xl font-bold '>{recipe.title}</h3>
+                <p className='text-3xl text-[#395852] py-10'>{recipe.overview}</p>
+
+                <div className='flex items-center gap-10 text-2xl text-[#163A34]'>
+                  <div className="flex items-center gap-5 max-lg:gap-3">
+                    <img src="/images/icon-servings.svg" alt="" />
+                    <p>Servings: {recipe.servings}</p>
+                  </div>
+                  <div className="flex items-center gap-5">
+                    <img src="/images/icon-prep-time.svg" alt="" />
+                    <p>Prep: {recipe.prepMinutes} mins</p>
+                  </div>
+                  <div className="flex items-center gap-5">
+                    <img src="/images/icon-cook-time.svg" alt="" />
+                    <p>Cook: {recipe.cookMinutes} mins</p>
+                  </div>
+                </div>
+            </div>
         </div>
     </div>
   )
