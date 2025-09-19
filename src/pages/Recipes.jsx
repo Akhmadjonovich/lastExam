@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Recipes = ({data, loading}) => {
@@ -88,8 +87,7 @@ const Recipes = ({data, loading}) => {
 
 
         
-          <div 
-            className="relative inline-block "
+          <div className="relative inline-block "
             onMouseEnter={() => setOpenCook(true)}
             onMouseLeave={() => setOpenCook(false)}
               
@@ -154,7 +152,7 @@ const Recipes = ({data, loading}) => {
                 {r.overview}
               </p>
 
-              <div className="grid grid-cols-2 gap-5 text-2xl max-xl:text-xl max-lg:text-lg text-[#163A34]">
+              <div className="grid grid-cols-2 pb-10  max-md:pb-1  gap-5 text-2xl max-xl:text-xl max-lg:text-lg text-[#163A34]">
                 <div className="flex items-center gap-5 max-lg:gap-3">
                   <img src="/images/icon-servings.svg" alt="" />
                   <p>Servings: {r.servings}</p>

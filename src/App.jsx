@@ -7,6 +7,7 @@ import Recipes from './pages/Recipes'
 import RecipesDetailed from './pages/RecipesDetailed'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 const App = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -18,12 +19,12 @@ const App = () => {
       .get(urlPoint)
       .then((response) => {
         setData(response.data);
-        setLoading(false);
       })
       .catch((error) => {
-        console.error("Xatolik:", error);
-        setLoading(false);
-      });
+        toast.error("Xatolik:", error);
+      }) .finally(  
+        setLoading(false)
+      )
   }, [urlPoint]);
 
 
